@@ -6,7 +6,7 @@ function Form() {
     <div className='container'>
       <div className='row'>
         <form>
-          <h1>THIS IS WHERE THE FORM WILL GO</h1>
+          <h1>Employee Directory</h1>
           <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
             <option selected>Open this select menu</option>
             <option value="1">show all employees</option>

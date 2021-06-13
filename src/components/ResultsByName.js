@@ -1,15 +1,25 @@
 
 import React from 'react';
 
+function alphebetize(a, b) {
+  const empA = a.name.last.toUpperCase();
+  const empB = b.name.last.toUpperCase();
 
-function ResultsByAge(props) {
+  let comparison = 0;
+  if (empA > empB) {
+    comparison = 1;
+  } else if (empA < empB) {
+    comparison = -1
+  }
+  return comparison;
+}
+
+function ResultsByName(props) {
   const array = props.results;
-  const byAge = array.sort(function(a, b) {
-    return a.dob.age - b.dob.age;
-  });
+  const byName = array.sort(alphebetize);
   return(
     <div className='container'>
-      {byAge.map(result => (
+      {byName.map(result => (
         <div className='row'>
         <div className='col align-self-center'>
           <img src={result.picture.medium} alt={result.name.first + ' ' + result.name.last}/> 
@@ -31,4 +41,4 @@ function ResultsByAge(props) {
   )
 }
 
-export default ResultsByAge;
+export default ResultsByName;

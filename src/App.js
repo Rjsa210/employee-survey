@@ -1,9 +1,12 @@
 import React from 'react';
-import API from './utils/API';
 import ResultsContainer from './components/ResultsContainer';
 
 function App() {
-  return (<ResultsContainer />);
+  return (
+  <div> 
+    <ResultsContainer />
+  </div> 
+  );
 }
 
 export default App;
